@@ -2,12 +2,11 @@ using System;
 
 class MainClass {
     public static void Consulta(string[] nens, int[] canicas, string[] ciutat, int posicion){
-        Console.WriteLine("Ahora esta es la cantidad de canicas que tienes:");
-        Console.WriteLine("Nombre" + nens [posicion]+ "Canicas" + canicas[posicion] + "Población" + ciutat[posicion]);
-        Console.WriteLine("");
-        Console.WriteLine("Dime las canicas que quieres poner o dispones ahora:");
+        Console.WriteLine("\nAhora esta es la cantidad de canicas que tienes:");
+        Console.WriteLine("Nombre: " + nens[posicion]+ "\nCanicas: " + canicas[posicion] + "\nPoblación: " + ciutat[posicion]);
+        Console.WriteLine("\nDime las canicas que quieres poner o dispones ahora:");
         int canicasActuales = Convert.ToInt32(Console.ReadLine());
-        canicas [posicion] = canicasActuales;
+        canicas[posicion] = canicasActuales;
     }
 
     public static void SubMenu (string[] nens, int[] canicas, string[] ciutat, int posicion) {
