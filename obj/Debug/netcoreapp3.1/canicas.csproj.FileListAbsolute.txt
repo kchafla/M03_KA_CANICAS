@@ -1,0 +1,13 @@
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/canicas/obj/Debug/netcoreapp3.1/canicas.csprojAssemblyReference.cache
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/canicas/obj/Debug/netcoreapp3.1/canicas.AssemblyInfoInputs.cache
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/canicas/obj/Debug/netcoreapp3.1/canicas.AssemblyInfo.cs
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/canicas/obj/Debug/netcoreapp3.1/canicas.csproj.CoreCompileInputs.cache
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/canicas/bin/Debug/netcoreapp3.1/canicas
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/canicas/bin/Debug/netcoreapp3.1/canicas.deps.json
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/canicas/bin/Debug/netcoreapp3.1/canicas.runtimeconfig.json
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/canicas/bin/Debug/netcoreapp3.1/canicas.runtimeconfig.dev.json
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/canicas/bin/Debug/netcoreapp3.1/canicas.dll
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/canicas/bin/Debug/netcoreapp3.1/canicas.pdb
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/canicas/obj/Debug/netcoreapp3.1/canicas.dll
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/canicas/obj/Debug/netcoreapp3.1/canicas.pdb
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/canicas/obj/Debug/netcoreapp3.1/canicas.genruntimeconfig.cache

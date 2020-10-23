@@ -8,7 +8,7 @@ class MainClass {
 
         int posicion = 0;
         int encontrado = 0;
-        for (int n = 0; n < nens.length; n++)
+        for (int n = 0; n < nens.Length; n++)
         {
             if (String.Equals(nombre, nens[n]))
             {
