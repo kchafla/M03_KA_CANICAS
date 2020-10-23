@@ -21,7 +21,7 @@ class MainClass {
             Console.WriteLine("No se ha podido encontrar un niño con ese nombre!");
         } else
         {
-            Console.WriteLine("Se ha encontrado!")
+            Console.WriteLine("Se ha encontrado!");
         }
     }
 
