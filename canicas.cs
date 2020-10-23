@@ -17,10 +17,10 @@ class MainClass {
         switch (opcion)
         {
             case 1:
-                Console.WriteLine("Saber el numero de canicas.");
+                Consulta(nens, canicas, ciutat, posicion);
                 break;
             case 2:
-                Console.WriteLine("Actualizar el numero de canicas.");
+                Consulta(nens, canicas, ciutat, posicion);
                 break;
             case 3:
                 Main();
