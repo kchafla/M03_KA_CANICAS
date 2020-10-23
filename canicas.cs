@@ -1,7 +1,27 @@
 using System;
 
 class MainClass {
-        
+    public static void SubMenu (string[] nens, int[] canicas, string[] ciutat, int posicion) {
+        Console.WriteLine("\nQue quieres hacer?\n1. Saber el numero de canicas que tienes.\n2. Actualizar el numero de canicas.\n3. Salir.");
+        int opcion = Convert.ToInt32(Console.ReadLine());
+
+        switch (opcion)
+        {
+            case 1:
+                Console.WriteLine("Saber el numero de canicas.");
+                break;
+            case 2:
+                Console.WriteLine("Actualizar el numero de canicas.");
+                break;
+            case 3:
+                Main();
+                break;
+            default:
+                Console.WriteLine("Selecciona una opcion valida!\n");
+                break;
+        }
+    }
+
     public static void Menu (string[] nens, int[] canicas, string[] ciutat) {
         Console.WriteLine("Escribe tu nombre:");
         string nombre = Console.ReadLine();
@@ -19,10 +39,13 @@ class MainClass {
 
         if (encontrado == 0)
         {
-            Console.WriteLine("No se ha podido encontrar un niño con ese nombre!");
+            Console.WriteLine("No se ha podido encontrar un niño con ese nombre!\n");
         } else
         {
-            Console.WriteLine("Se ha encontrado!");
+            while (true)
+            {
+                SubMenu(nens, canicas, ciutat, posicion);
+            }
         }
     }
 
@@ -30,6 +53,10 @@ class MainClass {
         string[] nens = {"Joan", "Nil", "Roc", "Thiago", "Nico","Noa", "Gerard", "Nor"};
         int[] canicas = {12,3,25,31,6,11,21,9};
         string[] ciutat = {"Vilanova", "Canyelles", "Vilanova", "Sitges", "Cunit", "Vilanova", "Kazahstan", "Cubelles"};
-        Menu(nens, canicas, ciutat);
+        
+        while (true)
+        {
+            Menu(nens, canicas, ciutat);
+        }
     }
 }
