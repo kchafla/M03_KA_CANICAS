@@ -1,6 +1,15 @@
 using System;
 
 class MainClass {
+    public static void Consulta(string[] nens, int[] canicas, string[] ciutat, int posicion){
+        Console.WriteLine("Ahora esta es la cantidad de canicas que tienes:");
+        Console.WriteLine("Nombre" + nens [posicion]+ "Canicas" + canicas[posicion] + "Población" + ciutat[posicion]);
+        Console.WriteLine("");
+        Console.WriteLine("Dime las canicas que quieres poner o dispones ahora:");
+        int canicasActuales = Convert.ToInt32(Console.ReadLine());
+        canicas [posicion] = canicasActuales;
+    }
+
     public static void SubMenu (string[] nens, int[] canicas, string[] ciutat, int posicion) {
         Console.WriteLine("\nQue quieres hacer?\n1. Saber el numero de canicas que tienes.\n2. Actualizar el numero de canicas.\n3. Salir.");
         int opcion = Convert.ToInt32(Console.ReadLine());
@@ -21,7 +30,7 @@ class MainClass {
                 break;
         }
     }
-
+        
     public static void Menu (string[] nens, int[] canicas, string[] ciutat) {
         Console.WriteLine("Escribe tu nombre:");
         string nombre = Console.ReadLine();
