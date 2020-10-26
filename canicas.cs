@@ -1,71 +1,55 @@
 using System;
+using System.Collections.Generic;
 
-class MainClass {
-    public static void Consulta(string[] nens, int[] canicas, string[] ciutat, int posicion){
-        Console.WriteLine("\nAhora esta es la cantidad de canicas que tienes:");
-        Console.WriteLine("Nombre: " + nens[posicion]+ "\nCanicas: " + canicas[posicion] + "\nPoblación: " + ciutat[posicion]);
-        Console.WriteLine("\nDime las canicas que quieres poner o dispones ahora:");
-        int canicasActuales = Convert.ToInt32(Console.ReadLine());
-        canicas[posicion] = canicasActuales;
-    }
+namespace Estructura_canicas
+{
+    struct Canica {
+        public string nombre;
+        public int canicas;
+        public string ciudad;
 
-    public static void SubMenu (string[] nens, int[] canicas, string[] ciutat, int posicion) {
-        Console.WriteLine("\nQue quieres hacer?\n1. Saber el numero de canicas que tienes.\n2. Actualizar el numero de canicas.\n3. Salir.");
-        int opcion = Convert.ToInt32(Console.ReadLine());
+        public Canica(string nombre, int canicas, string ciudad) {
+            this.nombre = nombre;
+            this.canicas = canicas;
+            this.ciudad = ciudad;
+        }
 
-        switch (opcion)
-        {
-            case 1:
-                Consulta(nens, canicas, ciutat, posicion);
-                break;
-            case 2:
-                Consulta(nens, canicas, ciutat, posicion);
-                break;
-            case 3:
-                Console.WriteLine("");
-                Main();
-                break;
-            default:
-                Console.WriteLine("Selecciona una opcion valida!\n");
-                break;
+        public void mostrarCanicas() {
+            Console.WriteLine("\nEstos son tus datos:");
+            Console.WriteLine("Nombre: " + this.nombre);
+            Console.WriteLine("Canicas: " + this.canicas);
+            Console.WriteLine("Ciudad: " + this.ciudad);
         }
     }
-        
-    public static void Menu (string[] nens, int[] canicas, string[] ciutat) {
-        Console.WriteLine("Escribe tu nombre:");
-        string nombre = Console.ReadLine();
 
-        int posicion = 0;
-        int encontrado = 0;
-        for (int n = 0; n < nens.Length; n++)
-        {
-            if (String.Equals(nombre, nens[n]))
-            {
-                posicion = n;
-                encontrado = 1; 
+    class MainClass {
+        public static void Main (string[] args) {
+            Canica[] agregarUsuarios = {
+                new Canica("Joan", 12, "Vilanova"),
+                new Canica("Nil", 3, "Canyelles"),
+                new Canica("Roc", 25, "Vilanova"),
+                new Canica("Thiago", 31, "Sitges"),
+                new Canica("Nico", 6, "Cunit"),
+                new Canica("Noa", 11, "Vilanova"),
+                new Canica("Gerard", 21, "Kazakhstan"),
+                new Canica("Nor", 9, "Cubelles")
+            };
+
+            List<Canica> usuarios = new List <Canica>(agregarUsuarios);
+
+            Console.WriteLine("Escribe tu nombre:");
+            string nombre = Console.ReadLine();
+            
+            foreach (Canica usuario in usuarios) {
+                if (String.Equals(nombre,usuario.nombre)) {
+                    usuario.mostrarCanicas();
+
+                    Console.WriteLine("\nCuantas canicas tienes ahora?");
+                    int canicasActuales = Convert.ToInt32(Console.ReadLine());
+
+                    usuario.canicas = canicasActuales;
+                }
             }
-        }
-
-        if (encontrado == 0)
-        {
-            Console.WriteLine("No se ha podido encontrar un niño con ese nombre!\n");
-        } else
-        {
-            while (true)
-            {
-                SubMenu(nens, canicas, ciutat, posicion);
-            }
-        }
-    }
-
-    public static void Main () {
-        string[] nens = {"Joan", "Nil", "Roc", "Thiago", "Nico","Noa", "Gerard", "Nor"};
-        int[] canicas = {12,3,25,31,6,11,21,9};
-        string[] ciutat = {"Vilanova", "Canyelles", "Vilanova", "Sitges", "Cunit", "Vilanova", "Kazahstan", "Cubelles"};
-        
-        while (true)
-        {
-            Menu(nens, canicas, ciutat);
         }
     }
 }
