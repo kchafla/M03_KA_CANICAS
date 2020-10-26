@@ -20,10 +20,14 @@ namespace Estructura_canicas
             Console.WriteLine("Canicas: " + this.canicas);
             Console.WriteLine("Ciudad: " + this.ciudad);
         }
+
+        public void modificarCanicas(int canicasActuales) {
+            new Canica(this.nombre, canicasActuales, this.ciudad);
+        }
     }
 
     class MainClass {
-        public static void Main (string[] args) {
+        public static void Main () {
             Canica[] agregarUsuarios = {
                 new Canica("Joan", 12, "Vilanova"),
                 new Canica("Nil", 3, "Canyelles"),
@@ -37,17 +41,39 @@ namespace Estructura_canicas
 
             List<Canica> usuarios = new List <Canica>(agregarUsuarios);
 
-            Console.WriteLine("Escribe tu nombre:");
-            string nombre = Console.ReadLine();
-            
-            foreach (Canica usuario in usuarios) {
-                if (String.Equals(nombre,usuario.nombre)) {
-                    usuario.mostrarCanicas();
+            while (true)
+            {
+                Console.WriteLine("\nQue quieres hacer?\n1. Mostrar tus canicas.\n2. Modificar tus canicas.");
+                int opcion = Convert.ToInt32(Console.ReadLine());
+                
+                switch (opcion)
+                {
+                    case 1:
+                        Console.WriteLine("\nEscribe tu nombre:");
+                        string nombre = Console.ReadLine();
+                        
+                        foreach (Canica usuario in usuarios) {
+                            if (String.Equals(nombre,usuario.nombre)) {
+                                usuario.mostrarCanicas();
+                            }
+                        }
+                        break;
+                    case 2:
+                        Console.WriteLine("\nEscribe tu nombre:");
+                        string nom = Console.ReadLine();
 
-                    Console.WriteLine("\nCuantas canicas tienes ahora?");
-                    int canicasActuales = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("\nEscribe tus canicas:");
+                        int actual = Convert.ToInt32(Console.ReadLine());
 
-                    usuario.canicas = canicasActuales;
+                        foreach (Canica usuario in usuarios) {
+                            if (String.Equals(nom,usuario.nombre)) {
+                                usuario.modificarCanicas(actual);
+                            }
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("\nElije una opcion!\n");
+                        break;
                 }
             }
         }
