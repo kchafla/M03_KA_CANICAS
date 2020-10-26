@@ -22,6 +22,7 @@ class MainClass {
                 Consulta(nens, canicas, ciutat, posicion);
                 break;
             case 3:
+                Console.WriteLine("");
                 Main();
                 break;
             default:
